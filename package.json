@@ -26,7 +26,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": "yarn lint"
+    "src/**/*.{ts,tsx}": "yarn lint"
   },
   "devDependencies": {
     "@types/enzyme-adapter-react-16": "^1.0.6",
