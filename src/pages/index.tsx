@@ -1,24 +1,30 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
-import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
-import Link from 'next/Link'
+import { makeStyles } from '@material-ui/core/styles'
 import Header from '../organisms/Header'
-import Copyright from '../templates/Coryright'
+import Sigma from '../organisms/Sigma'
+import Footer from '../organisms/Footer'
+
+const useStyles = makeStyles({
+  content: {
+    textAlign: 'center',
+  },
+})
 
 export default function Index(): React.ReactElement {
+  const classes = useStyles()
   return (
     <>
-      <Header />
+      <Header title="CalcSigma" />
       <Container maxWidth="sm">
         <Box my={4}>
-          <Typography variant="h4" component="h1" gutterBottom>
-            Next.js with TypeScript example
-          </Typography>
-          <Link href="./about">Go to the about page</Link>
-          <Copyright />
+          <div className={classes.content}>
+            <Sigma />
+          </div>
         </Box>
       </Container>
+      <Footer />
     </>
   )
 }

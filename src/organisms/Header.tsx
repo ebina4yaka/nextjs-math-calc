@@ -1,16 +1,27 @@
 import React from 'react'
-import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/Menu'
+import { AppBar, Toolbar, Typography } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
 
-export default function Header(): React.ReactElement {
+type Props = {
+  title: string
+}
+
+const useStyles = makeStyles({
+  header: {
+    width: '100%',
+  },
+})
+
+export default function Header(props: Props): React.ReactElement {
+  const classes = useStyles()
+  const { title } = props
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <IconButton edge="start" color="inherit" aria-label="menu">
-          <MenuIcon />
-        </IconButton>
-        <Typography variant="h6">News</Typography>
-      </Toolbar>
-    </AppBar>
+    <div className={classes.header}>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6">{title}</Typography>
+        </Toolbar>
+      </AppBar>
+    </div>
   )
 }

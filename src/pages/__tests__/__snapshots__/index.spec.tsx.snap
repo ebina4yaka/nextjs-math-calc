@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index 1`] = `
+Array [
+  <div
+    className="makeStyles-header-2"
+  >
+    <header
+      className="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+    >
+      <div
+        className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+      >
+        <h6
+          className="MuiTypography-root MuiTypography-h6"
+        >
+          CalcSigma
+        </h6>
+      </div>
+    </header>
+  </div>,
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthSm"
+  >
+    <div
+      className="MuiBox-root MuiBox-root-3"
+    >
+      <div
+        className="makeStyles-content-1"
+      >
+        <div
+          className="makeStyles-container-5"
+        >
+          <div>
+            <div
+              className="makeStyles-number-7"
+            >
+              10
+            </div>
+            <div
+              className="makeStyles-sigma-6"
+            >
+              Σ
+            </div>
+            <div
+              className="makeStyles-number-7"
+            >
+              k = 
+              1
+            </div>
+          </div>
+          <div
+            className="makeStyles-number-7"
+          >
+            1
+             * k
+          </div>
+          <div
+            className="makeStyles-answer-8"
+          >
+            <div
+              className="makeStyles-number-7"
+            >
+               = 
+              55
+            </div>
+          </div>
+        </div>
+        <div
+          className="makeStyles-textField-4"
+        >
+          <div
+            className="makeStyles-container-9"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root makeStyles-textField-10"
+            >
+              <div
+                className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedStart"
+                onClick={[Function]}
+              >
+                <div
+                  className="MuiInputAdornment-root MuiInputAdornment-positionStart"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary"
+                  >
+                    n=
+                  </p>
+                </div>
+                <input
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart"
+                  disabled={false}
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={false}
+                  type="number"
+                  value={10}
+                />
+              </div>
+            </div>
+            <div
+              className="MuiFormControl-root MuiTextField-root makeStyles-textField-10"
+            >
+              <div
+                className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedStart"
+                onClick={[Function]}
+              >
+                <div
+                  className="MuiInputAdornment-root MuiInputAdornment-positionStart"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary"
+                  >
+                    k=
+                  </p>
+                </div>
+                <input
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart"
+                  disabled={false}
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={false}
+                  type="number"
+                  value={1}
+                />
+              </div>
+            </div>
+            <div
+              className="MuiFormControl-root MuiTextField-root makeStyles-textField-10"
+            >
+              <div
+                className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedStart"
+                onClick={[Function]}
+              >
+                <div
+                  className="MuiInputAdornment-root MuiInputAdornment-positionStart"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary"
+                  >
+                    a=
+                  </p>
+                </div>
+                <input
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart"
+                  disabled={false}
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={false}
+                  type="number"
+                  value={1}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="makeStyles-footer-11"
+  >
+    <p
+      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignCenter"
+    >
+      Copyright © 
+      <a
+        className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
+        href="https://github.com/ebina4yaka/"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+         ebina4yaka 
+      </a>
+      2020.
+    </p>
+  </div>,
+]
+`;
