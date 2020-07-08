@@ -1,6 +1,6 @@
 import React from 'react'
-import Sigma from '../organisms/Sigma'
+import Summation from '../organisms/Summation'
 
 export default function Index(): React.ReactElement {
-  return <Sigma />
+  return <Summation />
 }

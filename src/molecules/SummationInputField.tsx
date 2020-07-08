@@ -27,7 +27,7 @@ const useStyles = makeStyles({
   },
 })
 
-export function CalcSigma(n: number, k: number, a: number): number {
+export function CalcSummation(n: number, k: number, a: number): number {
   let sum = 0
   for (let step = k; step <= n; step += 1) {
     sum += a * step
@@ -35,26 +35,26 @@ export function CalcSigma(n: number, k: number, a: number): number {
   return sum
 }
 
-export default function SigmaInputField(props: Props): React.ReactElement {
+export default function SummationInputField(props: Props): React.ReactElement {
   const classes = useStyles()
   const { n, k, a, setN, setK, setA, setAnswer } = props
 
   const nChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newN = Number(event.target.value)
     setN(newN)
-    setAnswer(CalcSigma(newN, k, a))
+    setAnswer(CalcSummation(newN, k, a))
   }
 
   const kChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newK = Number(event.target.value)
     setK(newK)
-    setAnswer(CalcSigma(n, newK, a))
+    setAnswer(CalcSummation(n, newK, a))
   }
 
   const aChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newA = Number(event.target.value)
     setA(newA)
-    setAnswer(CalcSigma(n, k, newA))
+    setAnswer(CalcSummation(n, k, newA))
   }
 
   return (
