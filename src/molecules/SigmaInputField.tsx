@@ -18,6 +18,8 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: '4vh',
+    marginBottom: '4vh',
   },
   textField: {
     margin: '1vh',
