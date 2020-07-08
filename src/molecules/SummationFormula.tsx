@@ -26,7 +26,7 @@ const useStyles = makeStyles({
   },
 })
 
-export default function SigmaFormula(props: Props): React.ReactElement {
+export default function SummationFormula(props: Props): React.ReactElement {
   const classes = useStyles()
   const { n, k, a, answer } = props
   return (

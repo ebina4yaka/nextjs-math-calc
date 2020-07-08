@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Sigma 1`] = `
+exports[`Summation 1`] = `
 Array [
   <div
     className="makeStyles-container-1"
