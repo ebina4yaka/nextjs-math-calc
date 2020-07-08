@@ -3,9 +3,21 @@ import React from 'react'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
 import CssBaseline from '@material-ui/core/CssBaseline'
+import Container from '@material-ui/core/Container'
+import { makeStyles } from '@material-ui/core/styles'
+import Box from '@material-ui/core/Box'
+import Header from '../organisms/Header'
+import Footer from '../organisms/Footer'
+
+const useStyles = makeStyles({
+  component: {
+    textAlign: 'center',
+  },
+})
 
 export default function MyApp(props: AppProps): React.ReactElement {
   const { Component, pageProps } = props
+  const classes = useStyles()
 
   React.useEffect(() => {
     // Remove the server-side injected CSS.
@@ -19,14 +31,20 @@ export default function MyApp(props: AppProps): React.ReactElement {
   return (
     <>
       <Head>
-        <title>Math Calc</title>
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
+        <title>MathCalc</title>
       </Head>
       <CssBaseline />
-      <Component {...pageProps} />
+      <header>
+        <Header title="MathCalc" />
+      </header>
+      <Container maxWidth="sm">
+        <Box my={4} className={classes.component}>
+          <Component {...pageProps} />
+        </Box>
+      </Container>
+      <footer>
+        <Footer />
+      </footer>
     </>
   )
 }

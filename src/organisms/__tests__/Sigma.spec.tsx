@@ -1,8 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Index from '../index'
+import Sigma from '../Sigma'
 
-test('Index', () => {
-  const tree = renderer.create(<Index />).toJSON()
+test('Sigma', () => {
+  const tree = renderer.create(<Sigma />).toJSON()
   expect(tree).toMatchSnapshot()
 })
