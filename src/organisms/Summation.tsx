@@ -1,14 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import SummationFormula from '../molecules/SummationFormula'
-import SummationInputField, {
-  CalcSummation,
-} from '../molecules/SummationInputField'
+import SummationInputField from '../molecules/SummationInputField'
+import UseSummation from '../hooks/UseSummation'
 
 export default function Summation(): React.ReactElement {
-  const [n, setN] = useState(10)
-  const [k, setK] = useState(1)
-  const [a, setA] = useState(1)
-  const [answer, setAnswer] = useState(CalcSummation(n, k, a))
+  const { n, k, a, answer, setNewSummation } = UseSummation()
   return (
     <>
       <SummationFormula n={n} k={k} a={a} answer={answer} />
@@ -16,10 +12,7 @@ export default function Summation(): React.ReactElement {
         n={n}
         k={k}
         a={a}
-        setN={setN}
-        setK={setK}
-        setA={setA}
-        setAnswer={setAnswer}
+        setNewSummation={setNewSummation}
       />
     </>
   )
