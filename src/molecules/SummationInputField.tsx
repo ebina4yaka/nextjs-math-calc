@@ -12,6 +12,8 @@ type Props = {
   setAnswer: React.Dispatch<React.SetStateAction<number>>
 }
 
+type Algebra = 'n' | 'k' | 'a'
+
 const useStyles = makeStyles({
   container: {
     display: 'flex',
@@ -39,22 +41,26 @@ export default function SummationInputField(props: Props): React.ReactElement {
   const classes = useStyles()
   const { n, k, a, setN, setK, setA, setAnswer } = props
 
-  const nChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newN = Number(event.target.value)
-    setN(newN)
-    setAnswer(CalcSummation(newN, k, a))
+  const setNewValue = (value: number, algebra: Algebra) => {
+    switch (algebra) {
+      case 'n':
+        setN(value)
+        setAnswer(CalcSummation(value, k, a))
+        break
+      case 'k':
+        setK(value)
+        setAnswer(CalcSummation(n, value, a))
+        break
+      case 'a':
+        setA(value)
+        setAnswer(CalcSummation(n, k, value))
+        break
+      default:
+    }
   }
 
-  const kChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newK = Number(event.target.value)
-    setK(newK)
-    setAnswer(CalcSummation(n, newK, a))
-  }
-
-  const aChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newA = Number(event.target.value)
-    setA(newA)
-    setAnswer(CalcSummation(n, k, newA))
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNewValue(Number(event.target.value), event.target.id as Algebra)
   }
 
   return (
@@ -63,8 +69,9 @@ export default function SummationInputField(props: Props): React.ReactElement {
         InputProps={{
           startAdornment: <InputAdornment position="start">n=</InputAdornment>,
         }}
+        id="n"
         value={n}
-        onChange={nChange}
+        onChange={handleChange}
         className={classes.textField}
         type="number"
       />
@@ -72,8 +79,9 @@ export default function SummationInputField(props: Props): React.ReactElement {
         InputProps={{
           startAdornment: <InputAdornment position="start">k=</InputAdornment>,
         }}
+        id="k"
         value={k}
-        onChange={kChange}
+        onChange={handleChange}
         className={classes.textField}
         type="number"
       />
@@ -81,8 +89,9 @@ export default function SummationInputField(props: Props): React.ReactElement {
         InputProps={{
           startAdornment: <InputAdornment position="start">a=</InputAdornment>,
         }}
+        id="a"
         value={a}
-        onChange={aChange}
+        onChange={handleChange}
         className={classes.textField}
         type="number"
       />
