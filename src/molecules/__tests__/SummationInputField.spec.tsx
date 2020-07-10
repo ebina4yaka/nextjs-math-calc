@@ -3,11 +3,11 @@ import '@testing-library/jest-dom/extend-expect'
 import { fireEvent, render } from '@testing-library/react'
 import { renderHook, act } from '@testing-library/react-hooks'
 import SummationInputField from '../SummationInputField'
-import UseSummation from '../../hooks/UseSummation'
+import useSummation from '../../hooks/useSummation'
 
 describe('SummationInputField Tests', () => {
   test('Input onChange Handle Test', () => {
-    const { result } = renderHook(() => UseSummation())
+    const { result } = renderHook(() => useSummation())
     const container = render(
       <SummationInputField
         n={result.current.n}
