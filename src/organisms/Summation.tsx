@@ -1,10 +1,10 @@
 import React from 'react'
 import SummationFormula from '../molecules/SummationFormula'
 import SummationInputField from '../molecules/SummationInputField'
-import UseSummation from '../hooks/UseSummation'
+import useSummation from '../hooks/useSummation'
 
 export default function Summation(): React.ReactElement {
-  const { n, k, a, answer, setNewSummation } = UseSummation()
+  const { n, k, a, answer, setNewSummation } = useSummation()
   return (
     <>
       <SummationFormula n={n} k={k} a={a} answer={answer} />
