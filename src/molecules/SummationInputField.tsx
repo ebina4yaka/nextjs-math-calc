@@ -32,6 +32,9 @@ export default function SummationInputField(props: Props): React.ReactElement {
     const inputN = document.getElementById('n') as HTMLInputElement
     const inputK = document.getElementById('k') as HTMLInputElement
     const inputA = document.getElementById('a') as HTMLInputElement
+    inputN.value = String(Number(inputN.value))
+    inputK.value = String(Number(inputK.value))
+    inputA.value = String(Number(inputA.value))
     setNewSummation(
       Number(inputN.value),
       Number(inputK.value),
