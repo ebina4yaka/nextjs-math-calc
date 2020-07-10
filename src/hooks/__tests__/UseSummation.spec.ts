@@ -1,8 +1,8 @@
 import { act, renderHook } from '@testing-library/react-hooks'
-import UseSummation from '../UseSummation'
+import useSummation from '../useSummation'
 
 test('Summation Hooks Test', () => {
-  const { result } = renderHook(() => UseSummation())
+  const { result } = renderHook(() => useSummation())
   const newN = 5
   const newK = 3
   const newA = 2
