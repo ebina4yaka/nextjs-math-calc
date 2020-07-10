@@ -25,14 +25,14 @@ describe('SummationInputField Tests', () => {
     act(() => {
       fireEvent.change(inputN, { target: { value: newN } })
     })
+    expect(result.current.n).toBe(newN)
     act(() => {
       fireEvent.change(inputK, { target: { value: newK } })
     })
+    expect(result.current.k).toBe(newK)
     act(() => {
       fireEvent.change(inputA, { target: { value: newA } })
     })
-    expect(result.current.n).toBe(newN)
-    expect(result.current.k).toBe(newK)
     expect(result.current.a).toBe(newA)
   })
 })
