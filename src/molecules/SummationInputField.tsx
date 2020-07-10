@@ -1,13 +1,12 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { TextField, InputAdornment } from '@material-ui/core'
-import { Algebra } from '../hooks/UseSummation'
 
 export type Props = {
   n: number
   k: number
   a: number
-  setNewSummation: (value: number, algebra: Algebra) => void
+  setNewSummation: (newN: number, newK: number, newA: number) => void
 }
 
 const useStyles = makeStyles({
@@ -29,8 +28,15 @@ export default function SummationInputField(props: Props): React.ReactElement {
   const classes = useStyles()
   const { n, k, a, setNewSummation } = props
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setNewSummation(Number(event.target.value), event.target.id as Algebra)
+  const handleChange = () => {
+    const inputN = document.getElementById('n') as HTMLInputElement
+    const inputK = document.getElementById('k') as HTMLInputElement
+    const inputA = document.getElementById('a') as HTMLInputElement
+    setNewSummation(
+      Number(inputN.value),
+      Number(inputK.value),
+      Number(inputA.value)
+    )
   }
 
   return (
