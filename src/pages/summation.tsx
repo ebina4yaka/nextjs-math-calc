@@ -1,6 +1,6 @@
 import React from 'react'
-import SummationComponent from '../organisms/SummationComponent'
+import SummationContainer from '../organisms/SummationContainer'
 
 export default function Summation(): React.ReactElement {
-  return <SummationComponent />
+  return <SummationContainer />
 }
