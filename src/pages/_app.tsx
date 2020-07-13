@@ -54,7 +54,7 @@ export default function MyApp(props: AppProps): React.ReactElement {
         <header>
           <Header title="MathCalc" />
         </header>
-        <Container maxWidth="sm">
+        <Container maxWidth="lg">
           <Box my={4} className={classes.component}>
             <Component {...pageProps} />
           </Box>

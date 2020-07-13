@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import Copyright from '../molecules/Coryright'
+import Copyright from '../atoms/Coryright'
 
 const useStyles = makeStyles({
   footer: {

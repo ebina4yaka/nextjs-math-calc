@@ -1,8 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Summation from '../Summation'
+import SummationContainer from '../SummationContainer'
 
 test('Summation Snapshot Test', () => {
-  const tree = renderer.create(<Summation />).toJSON()
+  const tree = renderer.create(<SummationContainer />).toJSON()
   expect(tree).toMatchSnapshot()
 })

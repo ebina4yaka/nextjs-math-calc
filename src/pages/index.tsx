@@ -1,6 +1,6 @@
 import React from 'react'
-import Summation from '../organisms/Summation'
+import Menu from '../organisms/Menu'
 
 export default function Index(): React.ReactElement {
-  return <Summation />
+  return <Menu />
 }
