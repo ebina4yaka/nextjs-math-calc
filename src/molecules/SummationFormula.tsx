@@ -35,7 +35,7 @@ export default function SummationFormula(props: Props): React.ReactElement {
         <div className={classes.sigma}>Σ</div>
         <div className={classes.number}>k = {k}</div>
       </div>
-      <div className={classes.number}>k</div>
+      <div className={classes.number}>a k</div>
       <div className={classes.answer}>
         <div className={classes.number}> = {answer}</div>
       </div>
