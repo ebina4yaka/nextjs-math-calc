@@ -1,6 +1,6 @@
 import React from 'react'
-import Summation from '../organisms/Summation'
+import ContentList from '../organisms/ContentList'
 
 export default function Index(): React.ReactElement {
-  return <Summation />
+  return <ContentList />
 }
