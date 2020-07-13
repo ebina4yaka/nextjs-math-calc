@@ -1,6 +1,6 @@
 import React from 'react'
-import ContentList from '../organisms/ContentList'
+import Menu from '../organisms/Menu'
 
 export default function Index(): React.ReactElement {
-  return <ContentList />
+  return <Menu />
 }

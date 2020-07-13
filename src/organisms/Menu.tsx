@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ContentCard from '../molecules/ContentCard'
 import contentList, { Content } from '../data/contentList'
 
-export default function ContentList(): React.ReactElement {
+export default function Menu(): React.ReactElement {
   const [contents, setContents] = useState(Array<Content>())
 
   useEffect(() => {
