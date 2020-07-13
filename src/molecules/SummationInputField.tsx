@@ -5,8 +5,7 @@ import { TextField, InputAdornment } from '@material-ui/core'
 export type Props = {
   n: number
   k: number
-  a: number
-  setNewSummation: (newN: number, newK: number, newA: number) => void
+  setNewSummation: (newN: number, newK: number) => void
 }
 
 const useStyles = makeStyles({
@@ -26,20 +25,14 @@ const useStyles = makeStyles({
 
 export default function SummationInputField(props: Props): React.ReactElement {
   const classes = useStyles()
-  const { n, k, a, setNewSummation } = props
+  const { n, k, setNewSummation } = props
 
   const handleChange = () => {
     const inputN = document.getElementById('n') as HTMLInputElement
     const inputK = document.getElementById('k') as HTMLInputElement
-    const inputA = document.getElementById('a') as HTMLInputElement
     inputN.value = String(Number(inputN.value))
     inputK.value = String(Number(inputK.value))
-    inputA.value = String(Number(inputA.value))
-    setNewSummation(
-      Number(inputN.value),
-      Number(inputK.value),
-      Number(inputA.value)
-    )
+    setNewSummation(Number(inputN.value), Number(inputK.value))
   }
 
   return (
@@ -62,17 +55,6 @@ export default function SummationInputField(props: Props): React.ReactElement {
         id="k"
         placeholder="input-k"
         value={k}
-        onChange={handleChange}
-        className={classes.textField}
-        type="number"
-      />
-      <TextField
-        InputProps={{
-          startAdornment: <InputAdornment position="start">a=</InputAdornment>,
-        }}
-        id="a"
-        placeholder="input-a"
-        value={a}
         onChange={handleChange}
         className={classes.textField}
         type="number"

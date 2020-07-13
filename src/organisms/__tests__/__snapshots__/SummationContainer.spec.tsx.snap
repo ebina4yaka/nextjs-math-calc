@@ -26,8 +26,7 @@ Array [
     <div
       className="makeStyles-number-3"
     >
-      1
-       * k
+      k
     </div>
     <div
       className="makeStyles-answer-4"
@@ -103,39 +102,6 @@ Array [
           onChange={[Function]}
           onFocus={[Function]}
           placeholder="input-k"
-          required={false}
-          type="number"
-          value={1}
-        />
-      </div>
-    </div>
-    <div
-      className="MuiFormControl-root MuiTextField-root makeStyles-textField-6"
-    >
-      <div
-        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedStart"
-        onClick={[Function]}
-      >
-        <div
-          className="MuiInputAdornment-root MuiInputAdornment-positionStart"
-        >
-          <p
-            className="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary"
-          >
-            a=
-          </p>
-        </div>
-        <input
-          aria-invalid={false}
-          autoFocus={false}
-          className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart"
-          disabled={false}
-          id="a"
-          onAnimationStart={[Function]}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          placeholder="input-a"
           required={false}
           type="number"
           value={1}

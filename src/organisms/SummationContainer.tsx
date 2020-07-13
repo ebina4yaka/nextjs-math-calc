@@ -5,16 +5,11 @@ import useSummation from '../hooks/useSummation'
 import BackButton from '../atoms/BackButton'
 
 export default function SummationContainer(): React.ReactElement {
-  const { n, k, a, answer, setNewSummation } = useSummation()
+  const { n, k, answer, setNewSummation } = useSummation()
   return (
     <>
-      <SummationFormula n={n} k={k} a={a} answer={answer} />
-      <SummationInputField
-        n={n}
-        k={k}
-        a={a}
-        setNewSummation={setNewSummation}
-      />
+      <SummationFormula n={n} k={k} answer={answer} />
+      <SummationInputField n={n} k={k} setNewSummation={setNewSummation} />
       <BackButton />
     </>
   )
