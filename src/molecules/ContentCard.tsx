@@ -2,10 +2,8 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import CardActionArea from '@material-ui/core/CardActionArea'
-import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
-import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 
 type Props = {
@@ -18,6 +16,10 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 345,
     textAlign: 'left',
+    marginTop: '1vh',
+    marginBottom: '1vh',
+    marginLeft: '1vw',
+    marginRight: '1vw',
   },
 })
 
@@ -27,7 +29,7 @@ export default function ContentCard(props: Props): React.ReactElement {
 
   return (
     <Card className={classes.root}>
-      <CardActionArea>
+      <CardActionArea href={url}>
         <CardMedia
           component="img"
           alt={title}
@@ -41,11 +43,6 @@ export default function ContentCard(props: Props): React.ReactElement {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button variant="contained" color="primary" href={url}>
-          GO
-        </Button>
-      </CardActions>
     </Card>
   )
 }
