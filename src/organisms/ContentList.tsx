@@ -1,29 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import ContentCard from '../molecules/ContentCard'
-
-type Json = {
-  data: Content[]
-  Response: string
-  Error: null
-}
-
-type Content = {
-  id: number
-  title: string
-  url: string
-  image: string
-}
+import contentList, { Content } from '../data/contentList'
 
 export default function ContentList(): React.ReactElement {
   const [contents, setContents] = useState(Array<Content>())
-  const json = `${window.location.protocol}//${window.location.host}/data/contentList.json`
 
   useEffect(() => {
-    fetch(json)
-      .then((response) => response.json())
-      .then((jsonResponse: Json) => {
-        setContents(jsonResponse.data)
-      })
+    setContents(contentList)
   }, [])
 
   const createContents = (): JSX.Element[] => {
