@@ -5,7 +5,7 @@ import { TextField, InputAdornment } from '@material-ui/core'
 export type Props = {
   n: number
   k: number
-  setNewSummation: (newN: number, newK: number) => void
+  setNewProduct: (newN: number, newK: number) => void
 }
 
 const useStyles = makeStyles({
@@ -23,16 +23,16 @@ const useStyles = makeStyles({
   },
 })
 
-export default function SummationInputField(props: Props): React.ReactElement {
+export default function ProductInputField(props: Props): React.ReactElement {
   const classes = useStyles()
-  const { n, k, setNewSummation } = props
+  const { n, k, setNewProduct } = props
 
   const handleChange = () => {
     const inputN = document.getElementById('n') as HTMLInputElement
     const inputK = document.getElementById('k') as HTMLInputElement
     inputN.value = String(Number(inputN.value))
     inputK.value = String(Number(inputK.value))
-    setNewSummation(Number(inputN.value), Number(inputK.value))
+    setNewProduct(Number(inputN.value), Number(inputK.value))
   }
 
   return (

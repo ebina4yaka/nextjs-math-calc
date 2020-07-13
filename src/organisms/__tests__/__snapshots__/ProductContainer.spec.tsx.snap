@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Summation Snapshot Test 1`] = `
+exports[`Product Snapshot Test 1`] = `
 Array [
   <div
     className="makeStyles-container-1"
@@ -12,9 +12,9 @@ Array [
         10
       </div>
       <div
-        className="makeStyles-sigma-2"
+        className="makeStyles-pi-2"
       >
-        Σ
+        Π
       </div>
       <div
         className="makeStyles-number-3"
@@ -35,7 +35,7 @@ Array [
         className="makeStyles-number-3"
       >
          = 
-        55
+        3628800
       </div>
     </div>
   </div>,

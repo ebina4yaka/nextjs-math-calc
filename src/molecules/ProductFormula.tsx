@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     alignItems: 'center',
     lineHeight: 1,
   },
-  sigma: {
+  pi: {
     fontSize: '10em',
   },
   number: {
@@ -25,14 +25,14 @@ const useStyles = makeStyles({
   },
 })
 
-export default function SummationFormula(props: Props): React.ReactElement {
+export default function ProductFormula(props: Props): React.ReactElement {
   const classes = useStyles()
   const { n, k, answer } = props
   return (
     <div className={classes.container}>
       <div>
         <div className={classes.number}>{n}</div>
-        <div className={classes.sigma}>Σ</div>
+        <div className={classes.pi}>Π</div>
         <div className={classes.number}>k = {k}</div>
       </div>
       <div className={classes.number}>a k</div>
